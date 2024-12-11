@@ -1,0 +1,121 @@
+.signup-form,
+.otp-form {
+  width: 500px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: rgb(4, 76, 157);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  display: block;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  font-size: 14px;
+  box-sizing: border-box;
+  background: transparent;
+  color: #e9d843;
+}
+
+.form-control:focus {
+  border-bottom: 2px solid #4caf50;
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:disabled {
+  background-color: #b1b1b1;
+  cursor: not-allowed;
+}
+
+.submit-btn:hover:enabled {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.otp-section {
+  margin-top: 40px;
+}
+
+.otp-form {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.otp-section .form-control {
+  font-size: 16px;
+  color: black;
+}
+
+.otp-section .submit-btn {
+  background-color: #007bff;
+}
+
+.otp-section .submit-btn:hover:enabled {
+  background-color: #0056b3;
+}
+.otp-section label[for="otp"] {
+  color: #000;
+}
+.signup-form,
+.otp-form {
+  animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.header {
+  font-size: 18px;
+  text-align: center;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}

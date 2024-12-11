@@ -1,0 +1,89 @@
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="signup-form">
+  <div class="header">
+    <h2>Register</h2>
+  </div>
+
+  <div class="form-group">
+    <label for="first_name">First Name</label>
+    <input
+      id="first_name"
+      formControlName="first_name"
+      class="form-control"
+      type="text"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="last_name">Last Name</label>
+    <input id="last_name" formControlName="last_name" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="gender">Gender</label>
+    <select id="gender" formControlName="gender" class="form-control">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="dob">Date of Birth</label>
+    <input id="dob" type="date" formControlName="dob" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      id="email"
+      type="email"
+      formControlName="email"
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      id="password"
+      type="password"
+      formControlName="password"
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="mobile">Mobile</label>
+    <input
+      id="mobile"
+      type="text"
+      formControlName="mobile"
+      class="form-control"
+    />
+  </div>
+
+  <button type="submit" [disabled]="signupForm.invalid" class="submit-btn">
+    Sign Up
+  </button>
+
+  <div class="login-link">
+    <p>Already have an account? <a [routerLink]="['/login']">Login here</a></p>
+  </div>
+</form>
+
+<div *ngIf="otpSent && !otpVerified" class="otp-section">
+  <form [formGroup]="otpForm" (ngSubmit)="onVerifyOTP()" class="otp-form">
+    <div class="form-group">
+      <label for="otp">Enter OTP</label>
+      <input id="otp" type="text" formControlName="otp" class="form-control" />
+    </div>
+
+    <button type="submit" [disabled]="otpForm.invalid" class="submit-btn">
+      Verify OTP
+    </button>
+  </form>
+</div>
+
+<div *ngIf="otpVerified" class="otp-success">
+  <p>OTP verified successfully! You can now proceed to your account.</p>
+</div>
